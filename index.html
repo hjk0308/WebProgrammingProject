@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CODI</title>
+    <style>
+      /* body 부분 CSS */
+
+      body {
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+
+      /* nav 부분 CSS */
+
+      /* 메뉴 부분 */
+      #na-ul {
+        display: flex;
+        justify-content: space-around;
+
+        padding-left: 200px;
+        padding-right: 200px;
+        margin-bottom: 0px;
+
+        list-style-type: none;
+
+        background-color: black;
+      }
+
+      .na-ul-li {
+        display: inline-block;
+        cursor: pointer;
+
+        padding-left: 70px;
+        padding-right: 70px;
+
+        font-size: 40px;
+      }
+
+      #na-ul-li-a1,
+      #na-ul-li-a2,
+      #na-ul-li-a3 {
+        text-align: center;
+        text-decoration: none;
+
+        color: white;
+      }
+
+      #na-ul-li-a1:hover,
+      #na-ul-li-a2:hover,
+      #na-ul-li-a3:hover {
+        color: gray;
+      }
+
+      /* section 1 부분 CSS */
+
+      #st1 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        background-size: 1500px 700px;
+        background-image: url(BGImage.PNG);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      #st1-title {
+        margin-bottom: 50px;
+
+        text-align: center;
+
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        font-family: Arial;
+      }
+
+      #st1-div1,
+      #st1-div2 {
+        text-align: center;
+
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      #st1-div1-span,
+      #st1-div2-span {
+        transition: color 5s; /* 5초 동안 서서히 색상을 변화 */
+        transition: font-size 5s; /* 5초 동안 서서히 글자 크기를 변화 */
+
+        color: white;
+        font-size: 30px;
+      }
+
+      /* footer 부분 CSS */
+
+      #fo-div1,
+      #fo-div2 {
+        display: inline-block;
+
+        margin-left: 50px;
+        margin-right: 50px;
+
+        text-align: center;
+      }
+    </style>
+    <script>
+      // body 박스 안에서 마우스 휠을 내린 경우 redText 함수 호출
+      function redText(e) {
+        // 마우스 휠을 밑으로 내린 경우
+        if (e.wheelDelta < 0) {
+          s1 = document.getElementById('st1-div1-span') // 전 세계 확진환자 수를 나타내는 span 태그의 DOM 객체
+          s2 = document.getElementById('st1-div2-span') // 전국 확진환자 수를 나타내는 span 태그의 DOM 객체
+
+          s1.style.color = 'red' // 전 세계 확진환자 수의 글자색을 빨간색으로 바꿈
+          s1.style.fontSize = '50px' // 전 세계 확진환자 수의 글자 크기를 50px로 바꿈
+
+          s2.style.color = 'red' // 전국 확진환자 수의 글자색을 빨간색으로 바꿈
+          s2.style.fontSize = '50px' // 전국 확진환자 수의 글자 크기를 50px로 바꿈
+        }
+      }
+    </script>
+  </head>
+  <body onwheel="redText(event)">
+    <header>
+      <!-- 웹 사이트 이름 부분 -->
+      <div>
+        <h1 style="display: inline-block; font-size: 65px">CODI</h1>
+        <h4 style="display: inline-block; margin-right: 50px">
+          COVID-19 Information
+        </h4>
+      </div>
+    </header>
+    <nav>
+      <!-- 메뉴 부분 -->
+      <ul id="na-ul">
+        <li class="na-ul-li">
+          <a id="na-ul-li-a1" href="intro.html" target="_self">Intro</a>
+        </li>
+        <li class="na-ul-li">
+          <a id="na-ul-li-a2" href="main.html" target="_self">Main</a>
+        </li>
+        <li class="na-ul-li">
+          <a id="na-ul-li-a3" href="outro.html" target="_self">Outro</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="st1">
+      <!-- 코로나 바이러스 현황 부분 -->
+      <div>
+        <div id="st1-title">
+          코로나 바이러스 감염증-19 발생 현황 <br />
+          <span style="font-size: 30px">2021년 12월 9일 기준</span>
+        </div>
+        <br />
+        <div id="st1-div1">
+          전 세계 <br />
+          확진환자 수 &nbsp;&nbsp;<span id="st1-div1-span">267,819,454</span>
+        </div>
+        <br />
+        <br />
+        <div id="st1-div2">
+          전국 <br />
+          확진환자 수 &nbsp;&nbsp;<span id="st1-div2-span">496,584</span>
+        </div>
+      </div>
+    </section>
+    <footer id="fo" style="text-align: center">
+      <!-- 정보 및 이미지 제공 부분 -->
+      <br />
+      <br />
+      <div id="fo-div1">
+        <strong>COVID-19 관련 정보 출처</strong><br />
+        <a href="https://www.naver.com/" target="_blank"
+          ><img src="NAVER.PNG" width="220px" height="80px"
+        /></a>
+        <a href="https://www.kdca.go.kr/index.es?sid=a2" target="_blank"
+          ><img src="KCDA.PNG" width="205px" height="80px"
+        /></a>
+      </div>
+      <div id="fo-div2">
+        <strong>이미지 출처</strong><br />
+        <a href="https://unsplash.com/" target="_blank">
+          <img src="unsplash.PNG" width="260px" height="80px" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

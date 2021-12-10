@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CODI-Outro</title>
+    <style>
+      /* body 부분의 CSS */
+
+      body {
+        margin-top: 100px;
+      }
+
+      /* header 부분의 CSS */
+
+      #he {
+        text-align: center;
+      }
+
+      /* CODI - Outro 문구 부분의 CSS */
+      #he-di1-h2 {
+        display: inline-block;
+
+        margin: 50px;
+
+        font-size: 60px;
+      }
+
+      /* 텍스트를 위에서 아래로 이동하게 하는 애니메이션 */
+      @keyframes textDown {
+        from {
+          transform: translateY(-20px);
+        }
+        to {
+          transform: translateY(20px);
+        }
+      }
+
+      #he-di2 {
+        animation-name: textDown;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        padding-bottom: 1000px;
+
+        font-size: 25px;
+      }
+
+      /* section 1 부분의 CSS */
+
+      #se1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 500px;
+        padding-bottom: 500px;
+
+        margin-bottom: 1500px;
+
+        background-size: 1500px 1000px;
+        background-image: url(vr.PNG);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      /* section 1의 header 부분의 CSS */
+      #se1-he {
+        position: relative;
+        top: -100px;
+      }
+
+      #se1-he-di {
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      /* section 1의 article 부분의 CSS */
+      #se1-ar-di1 {
+        display: inline-block;
+        position: relative;
+        left: -150px;
+        top: -50px;
+      }
+
+      /* 이미지 이동 관련 리스트 부분의 CSS */
+      #se1-ar-di1-ul {
+        list-style-type: none;
+        padding: 10px;
+        border-radius: 70px;
+
+        background-color: lightgray;
+      }
+
+      .u-li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        cursor: pointer;
+
+        font-size: 30px;
+      }
+
+      #se1-ar-di2 {
+        display: inline-block;
+
+        width: 970px;
+        height: 300px;
+      }
+
+      #se1-ar-di2-p {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      /* section 2 부분의 CSS */
+
+      #se2 {
+        display: flex;
+        justify-content: flex-end;
+
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 500px;
+        padding-bottom: 500px;
+
+        margin-bottom: 100px;
+
+        background-size: 1500px 1000px;
+        background-image: url(chess.PNG);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      #se2-di {
+        width: 800px;
+        height: 150px;
+
+        color: white;
+
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .se2-di-sp {
+        color: yellow;
+      }
+
+      /* nav 부분의 CSS */
+
+      #nv {
+        position: fixed;
+        right: 30px;
+        bottom: 200px;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      #nv-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0px;
+        border-radius: 30px;
+
+        list-style-type: none;
+
+        background-color: dodgerblue;
+
+        font-size: 30px;
+      }
+
+      .menu-li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #u,
+      #h,
+      #d {
+        text-decoration: none;
+
+        cursor: pointer;
+      }
+
+      #u:visited,
+      #h:visited,
+      #d:visited {
+        color: black;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <!-- 처음 화면 부분 -->
+    <header id="he">
+      <div id="he-di1">
+        <h2 id="he-di1-h2">CODI - Outro</h2>
+      </div>
+      <div id="he-di2">
+        우측 하단에 있는 <span style="color: blue">파란색</span> 메뉴를 이용해
+        주세요.
+      </div>
+    </header>
+    <!-- 포스트 코로나 시대에 주목해야 할 분야와 관련된 부분 -->
+    <section id="se1">
+      <header id="se1-he">
+        <div id="se1-he-di">
+          코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />
+          <span id="se1-he-di-sp">주목해야 할 분야 - 메타버스와 가상 현실</span>
+        </div>
+      </header>
+      <article id="se1-ar">
+        <div id="se1-ar-di1">
+          <ul id="se1-ar-di1-ul">
+            <li class="u-li" onclick="changeScreen(event)">●</li>
+            <li class="u-li" onclick="changeScreen(event)">○</li>
+            <li class="u-li" onclick="changeScreen(event)">○</li>
+          </ul>
+        </div>
+        <div id="se1-ar-di2">
+          <p id="se1-ar-di2-p">
+            코로나로 인하여 비대면 방식을 지향하게 되면서 가상과 현실 세계를<br />
+            결합한 메타버스 분야가 주목받게 되었습니다. 포스트 코로나
+            시대에는<br />
+            메타버스와 가상현실이 합쳐져 새로운 생태계를 만들 것입니다.<br />
+          </p>
+        </div>
+      </article>
+    </section>
+    <!-- 마무리 부분 -->
+    <section id="se2">
+      <div id="se2-di">
+        앞으로 다가올 포스트 코로나 시대<br />
+        <span class="se2-di-sp">변화</span>에 먼저 적응하는 사람이<br />
+        <span class="se2-di-sp">기회</span>를 잡을 수 있습니다.
+      </div>
+    </section>
+    <!-- 파란색 웹 페이지 이동 메뉴 -->
+    <nav id="nv">
+      <ul id="nv-menu">
+        <li class="menu-li">
+          <a id="u" title="위로 이동" onclick="up()">▲</a>
+        </li>
+        <li class="menu-li">
+          <a id="h" title="홈으로 이동" href="index.html"
+            ><img src="house.PNG" width="50px" height="50px"
+          /></a>
+        </li>
+        <li class="menu-li">
+          <a id="d" title="아래로 이동" onclick="down()">▼</a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      // 포스트 코로나 시대에 주목해야 할 분야와 관련된 부분의 이미지 메뉴 관련 코드
+
+      let current = 0 // 현재 위치를 저장하는 변수
+      let se = document.getElementById('se1') // section 1 객체
+      let he = document.getElementById('se1-he-di') // section 1의 제목 객체
+      let lis = document.getElementsByClassName('u-li') // 이미지 메뉴 버튼 관련 리스트들의 컬렉션
+      let p = document.getElementById('se1-ar-di2-p') // 이미지 관련 설명 객체
+
+      // 배경 이미지와 이미지 관련된 내용으로 변경하는 함수
+      function changeScreen(e) {
+        if (e.target == lis[0]) {
+          // lis[0]을 누른 경우
+
+          current = 0 // 현재 위치를 0으로 변경
+
+          // 누른 lis[0] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '●'
+          lis[1].innerHTML = '○'
+          lis[2].innerHTML = '○'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("vr.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'black'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 메타버스와 가상 현실</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'black'
+          p.innerHTML =
+            '코로나로 인하여 비대면 방식을 지향하게 되면서 가상과 현실 세계를<br />\
+            결합한 메타버스 분야가 주목받게 되었습니다. 포스트 코로나\
+            시대에는<br />\
+            메타버스와 가상현실이 합쳐져 새로운 생태계를 만들 것입니다.<br />'
+        } else if (e.target == lis[1]) {
+          // lis[1]을 누른 경우
+
+          current = 1 // 현재 위치를 1로 변경
+
+          // 누른 lis[1] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '○'
+          lis[1].innerHTML = '●'
+          lis[2].innerHTML = '○'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("aiRobot.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'white'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 인공지능</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'white'
+          p.innerHTML =
+            '코로나 발생 이전에도 인공지능 분야는 중시되었으며, 코로나로<br>\
+            인하여 의료 영역에서 인공지능의 활용이 증가하였습니다. <br>\
+            앞으로도 인공지능 분야는 계속해서 성장할 것입니다.'
+        } else {
+          // lis[2]를 누른 경우
+          current = 2
+
+          // 누른 lis[2] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '○'
+          lis[1].innerHTML = '○'
+          lis[2].innerHTML = '●'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("DBserver.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'white'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 빅데이터</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'white'
+          p.innerHTML =
+            '데이터는 분야와 상관없이 모든 영역에서 중요하게 사용됩니다.<br>\
+            따라서 엄청난 양의 데이터들을 나타내는 빅데이터는 그 중요성이 <br>\
+            계속해서 커질 것입니다.'
+        }
+      }
+
+      // 배경 이미지와 이미지 관련된 내용으로 자동으로 변경하기 위한 함수
+      function autoChangeScreen() {
+        if (current == 0) {
+          // 현재 위치가 0인 경우
+
+          current = 1 // 현재 위치를 1로 변경
+
+          // 현재 위치에 해당하는 lis[1] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '○'
+          lis[1].innerHTML = '●'
+          lis[2].innerHTML = '○'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("aiRobot.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'white'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 인공지능</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'white'
+          p.innerHTML =
+            '코로나 발생 이전에도 인공지능 분야는 중시되었으며, 코로나로<br>\
+            인하여 의료 영역에서 인공지능의 활용이 증가하였습니다. <br>\
+            앞으로도 인공지능 분야는 계속해서 성장할 것입니다.'
+        } else if (current == 1) {
+          // 현재 위치가 1인 경우
+
+          current = 2 // 현재 위치를 2로 변경
+
+          // 현재 위치에 해당하는 lis[2] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '○'
+          lis[1].innerHTML = '○'
+          lis[2].innerHTML = '●'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("DBserver.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'white'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 빅데이터</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'white'
+          p.innerHTML =
+            '데이터는 분야와 상관없이 모든 영역에서 중요하게 사용됩니다.<br>\
+            따라서 엄청난 양의 데이터들을 나타내는 빅데이터는 그 중요성이 <br>\
+            계속해서 커질 것입니다.'
+        } else {
+          // 현재 위치가 2인 경우
+
+          current = 0 // 현재 위치를 0으로 변경
+
+          // 현재 위치에 해당하는 lis[0] 부분만 검은색 동그라미로 변경
+          lis[0].innerHTML = '●'
+          lis[1].innerHTML = '○'
+          lis[2].innerHTML = '○'
+
+          // 배경 이미지를 변경
+          se.style.backgroundImage = 'url("vr.PNG")'
+
+          // 배경 이미지와 관련된 제목으로 변경
+          he.style.color = 'black'
+          he.innerHTML =
+            '코로나 그 이후 &lt;포스트 코로나 시대&gt; <br />\
+          <span id="se1-he-di-sp">주목해야 할 분야 - 메타버스와 가상 현실</span>'
+
+          // 배경 이미지와 관련된 내용으로 변경
+          p.style.color = 'black'
+          p.innerHTML =
+            '코로나로 인하여 비대면 방식을 지향하게 되면서 가상과 현실 세계를<br />\
+            결합한 메타버스 분야가 주목받게 되었습니다. 포스트 코로나\
+            시대에는<br />\
+            메타버스와 가상현실이 합쳐져 새로운 생태계를 만들 것입니다.<br />'
+        }
+      }
+
+      window.setInterval('autoChangeScreen()', 6000) // 6초마다 autoChangeScreen 함수를 호출
+
+      let pl = 0 // 현재 위치를 저장하는 변수
+      let ids = ['#he', '#se1', '#se2'] // body 태그의 자식 태그들의 id 배열
+      let u = document.getElementById('u') // 파란색 메뉴의 위로 이동하는 버튼을 담당하는 a 태그의 DOM 객체
+      let d = document.getElementById('d') // 파란색 메뉴의 아래로 이동하는 버튼을 담당하는 a 태그의 DOM 객체
+
+      // 위로 이동하는 버튼을 눌렀을 때 호출되는 함수
+      function up() {
+        if (pl == 0) {
+          // 현재 위치가 ids[0]일 때
+
+          u.href = ids[0] // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 ids[0]으로 함으로써 변동을 주지 않음
+          pl = 0 // 현재 위치를 0으로 주어서 현재 위치를 변경하지 않음
+        } else if (pl == 1) {
+          // 현재 위치가 ids[1]일 때
+
+          u.href = ids[0] // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[1]에서 위로 이동할 수 있게 ids[0]으로 설정
+          pl = 0 // 현재 위치를 이동 후 위치로 변경
+        } else {
+          // 현재 위치가 ids[2]일 때
+
+          u.href = ids[1] // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[2]에서 위로 이동할 수 있게 ids[1]로 설정
+          pl = 1 // 현재 위치를 이동 후 위치로 변경
+        }
+      }
+
+      // 아래로 이동하는 버튼을 눌렀을 때 호출되는 함수
+      function down() {
+        if (pl == 0) {
+          // 현재 위치가 ids[0]일 때
+
+          d.href = ids[1] // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[0]에서 아래로 이동할 수 있게 ids[1]로 설정
+          pl = 1 // 현재 위치를 이동 후 위치로 변경
+        } else if (pl == 1) {
+          // 현재 위치가 ids[1]일 때
+
+          d.href = ids[2] // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[1]에서 아래로 이동할 수 있게 ids[2]로 설정
+          pl = 2 // 현재 위치를 이동 후 위치로 변경
+        } else {
+          // 현재 위치가 ids[2]일 때
+
+          d.href = ids[2] // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 ids[2]로 함으로써 변동을 주지 않음
+          pl = 2 // 현재 위치를 2로 주어서 현재 위치를 변경하지 않음
+        }
+      }
+    </script>
+  </body>
+</html>

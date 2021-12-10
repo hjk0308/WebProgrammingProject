@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CODI-Intro</title>
+    <style>
+      /* body 부분 CSS */
+
+      body {
+        margin-top: 100px;
+      }
+
+      /* header 부분 CSS */
+
+      #he {
+        margin-bottom: 1000px;
+        
+        text-align: center;
+      }
+
+      /* CODI - Intro 문구 부분 CSS */
+      #he-di1-h2 {
+        display: inline-block;
+
+        margin: 50px;
+
+        font-size: 60px;
+      }
+
+      /* 텍스트를 위에서 아래로 이동하게 하는 애니메이션 */
+      @keyframes textDown {
+        from {
+          transform: translateY(-20px);
+        }
+        to {
+          transform: translateY(20px);
+        }
+      }
+
+      #he-di2 {
+        animation-name: textDown;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        font-size: 25px;
+      }
+
+      /* section 1 부분의 CSS */
+
+      #se1 {
+        margin-bottom : 1500px;
+      }
+
+      #se1-di {
+
+        padding : 200px;
+
+        text-align: center;
+
+        background-color : lightgray;
+      }
+
+      #se1-di-di {
+        margin-bottom : 100px;
+        
+        font-size : 40px;
+        font-weight: 700;
+      }
+
+      #se1-di-im {
+        width: 500px;
+        height: 300px;
+        margin-bottom: 70px;
+      }
+
+      #se1-di-p1 {
+        margin-left : 150px;
+        margin-right : 150px;
+
+        text-align: left;
+
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      /* section 2 부분의 CSS */
+
+      #se2 {
+        padding-left : 200px;
+        padding-right : 200px;
+        padding-top : 500px;
+        padding-bottom : 500px;
+
+        margin-bottom : 1500px;
+        
+        background-size : 1500px 1000px;
+        background-image : url(world.PNG);
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        color : white;
+
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      /* section 2의 header 부분의 CSS */
+      #se2-he {
+        position: relative;
+        top: -150px;
+
+        text-align: center;
+      }
+
+      /* section 2의 article 부분의 CSS */
+      #se2-ar {
+        padding-left : 100px;
+        padding-right : 100px;
+      }
+
+      #se2-ar-di {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* 텍스트를 흰색에서 빨간색으로 바꾸는 애니메이션 */
+      @keyframes redText {
+        from {
+          color : white;
+        }
+        to {
+          color : red;
+        }
+      }
+
+      /* 텍스트를 흰색에서 파란색으로 바꾸는 애니메이션 */
+      @keyframes blueText {
+        from {
+          color : white;
+        }
+        to {
+          color : blue;
+        }
+      }
+
+      /* 확진자 수 부분 */
+      #se2-ar-di-sp1, #se2-ar-di-sp2 {
+        animation-name: redText;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+        background-color: black;
+      }
+
+      /* 격리 해제 수 부분 */
+      #se2-ar-di-sp3, #se2-ar-di-sp4 {
+        animation-name: blueText;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        
+        background-color: black;
+      }
+
+      td, th {
+        width : 200px;
+        height: 100px;
+      }
+
+      /* section 3 부분의 CSS */
+
+      #se3 {
+        padding-left : 200px;
+        padding-right : 200px;
+        padding-top : 500px;
+        padding-bottom : 500px;
+
+        background-size : 1500px 1000px;
+        background-image : url(world2.PNG);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      #se3-p {
+        color: white;
+
+        font-size: 40px;
+
+        text-align: center;
+      }
+
+      /* nav 부분의 CSS */
+
+      #nv {
+        position: fixed;
+        right : 30px;
+        bottom : 200px;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      #nv-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0px;
+        border-radius: 30px;
+
+        list-style-type: none;
+
+        background-color: dodgerblue;
+
+        font-size: 30px;
+      }
+
+      .menu-li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #u, #h, #d {
+        text-decoration: none;
+
+        cursor: pointer;
+      }
+
+      #u:visited, #h:visited, #d:visited {
+        color : black;
+      }
+
+    </style>
+    <script>
+
+      function spanView() {
+        // 클래스 속성의 값이 t-span인 태그들의 DOM 객체
+        sp = document.getElementsByClassName("t-span"); 
+
+        // t-span인 태그들의 DOM 객체들의 배경색을 노란색으로 변경
+        for (let i = 0; i < sp.length; i++)
+        {
+          sp[i].style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 처음 화면 부분 -->
+    <header id="he">
+      <div id="he-di1">
+        <h2 id="he-di1-h2">CODI - Intro</h2>
+      </div>
+      <div id="he-di2">우측 하단에 있는 <span style="color : blue;">파란색</span> 메뉴를 이용해 주세요.</div>
+    </header>
+    <!-- 코로나 바이러스 내용 부분 -->
+    <section id="se1">
+      <div id="se1-di">
+        <div id="se1-di-di">코로나 바이러스 감염증-19</div>
+        <img id="se1-di-im" src="COVID-19.PNG" />
+        <p id="se1-di-p1">
+          <span class="t-span">2019년 12월 중국 우한</span>에서 <span class="t-span">처음 발생</span>한 이후 
+          <span class="t-span">중국 전역</span>과 <span class="t-span">전 세계로 확산</span>된, 새로운 유형의 
+          <span class="t-span">코로나 바이러스(SARS-CoV-2)에 의한 호흡기 감염질환</span>이다. 
+          <span class="t-span">코로나 바이러스 감염증-19</span>는 <span class="t-span">감염자의 비말</span>(침방울)이
+          호흡기나 눈·코·입의 점막으로 침투될 때 <span class="t-span">전염</span>된다. 감염되면 약 
+          <span class="t-span">2~14일(추정)의 잠복기</span>를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 
+          <span class="t-span">호흡기 증상</span>, 폐렴이 주증상으로 나타나지만 무증상 감염 사례 빈도도 높게 나오고 있다.
+          <br><br>[네이버 지식백과] 코로나바이러스감염증-19 - (COVID-19) (시사상식사전, pmg 지식엔진연구소)
+        </p>
+        <br>
+        <p id="se1-di-p2">
+          <form id="se1-di-p2-fo" style="font-size : 20px;">
+            핵심만 보시려면 <strong>확인</strong>을 눌러주세요. &nbsp;&nbsp;&nbsp;
+            <button type="button" onclick="spanView()">확인</button>
+          </form>
+        </p>
+      </div>
+    </section>
+    <!-- 코로나 바이러스 발생 동향 부분 -->
+    <section id="se2">
+      <header id="se2-he">
+        <div id="se2-he-di1">
+          &lt;코로나 바이러스 발생 초기&gt; <br>
+          전국 확진자 수 발생 동향 <br>
+          2020.02.15 ~ 2020.05.15 (3개월)
+        </div>
+      </header>
+      <article id="se2-ar">
+        <div id="se2-ar-di">
+          <table id="se2-ar-di-ta">
+            <thead>
+              <tr><th>누적</th><th>2월 15일</th><th>5월 15일</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr><td>확진자 수</td><td><span id="se2-ar-di-sp1">29명</span></td><td><span id="se2-ar-di-sp2">11,037명</span></td><td>대폭 증가</td></tr>
+              <tr><td>격리해제</td><td><span id="se2-ar-di-sp3">9명</span></td><td><span id="se2-ar-di-sp4"> 9,851명</span></td><td>대폭 증가</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+    <!-- 코로나 바이러스 진행 상황 -->
+    <section id="se3">
+      <p id="se3-p">
+        코로나 바이러스 감염증-19는 2019년 12월 처음 발생 이후<br>
+        종식되지 못 하였고, 이후 WHO에서 공식적으로<br>
+        국제적 비상사태를 선포했으나, 현재 진행형
+      </p>
+    </section>
+    <!-- 파란색 웹 페이지 이동 메뉴 -->
+    <nav id="nv">
+      <ul id="nv-menu">
+        <li class="menu-li"><a id="u" title="위로 이동" onclick="up()">▲</a></li>
+        <li class="menu-li"><a id="h" title="홈으로 이동" href="index.html"><img src="house.PNG" width="50px" height="50px"></a></li>
+        <li class="menu-li"><a id="d" title="아래로 이동" onclick="down()">▼</a></li>
+      </ul>
+    </nav>
+    <script>
+      // 파란색 웹 페이지 이동 메뉴 관련 코드 
+
+      let p = 0;  // 현재 위치를 저장하는 변수
+      let ids = ["#he", "#se1", "#se2", "#se3"];  // body 태그의 자식 태그들의 id 배열
+      let u = document.getElementById("u");  // 파란색 메뉴의 위로 이동하는 버튼을 담당하는 a 태그의 DOM 객체 
+      let d = document.getElementById("d");  // 파란색 메뉴의 아래로 이동하는 버튼을 담당하는 a 태그의 DOM 객체 
+
+      function up() {  // 위로 이동하는 버튼을 눌렀을 때 호출되는 함수 
+        if (p == 0) {  // 현재 위치가 ids[0]일 때
+          u.href = ids[0];  // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 ids[0]으로 함으로써 변동을 주지 않음
+          p = 0;  // 현재 위치를 0으로 주어서 현재 위치를 변경하지 않음
+        }
+        else if (p == 1) {  // 현재 위치가 ids[1]일 때
+          u.href = ids[0];  // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[1]에서 위로 이동할 수 있게 ids[0]으로 설정 
+          p = 0;  // 현재 위치를 이동 후 위치로 변경
+        }
+        else if (p == 2) {  // 현재 위치가 ids[2]일 때
+          u.href = ids[1];  // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[2]에서 위로 이동할 수 있게 ids[1]로 설정
+          p = 1;  // 현재 위치를 이동 후 위치로 변경
+        }
+        else {  // 현재 위치가 ids[3]일 때
+          u.href = ids[2];  // 위로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[3]에서 위로 이동할 수 있게 ids[2]로 설정
+          p = 2;  // 현재 위치를 이동 후 위치로 변경
+        }
+      }
+
+      function down() {  // 아래로 이동하는 버튼을 눌렀을 때 호출되는 함수 
+        if (p == 0) {  // 현재 위치가 ids[0]일 때
+          d.href = ids[1];  // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[0]에서 아래로 이동할 수 있게 ids[1]로 설정
+          p = 1;  // 현재 위치를 이동 후 위치로 변경
+        }
+        else if (p == 1) {  // 현재 위치가 ids[1]일 때
+          d.href = ids[2];  // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[1]에서 아래로 이동할 수 있게 ids[2]로 설정
+          p = 2;  // 현재 위치를 이동 후 위치로 변경
+        }
+        else if (p == 2) {  // 현재 위치가 ids[2]일 때
+          d.href = ids[3];  // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 현재 위치 ids[2]에서 아래로 이동할 수 있게 ids[3]으로 설정
+          p = 3;  // 현재 위치를 이동 후 위치로 변경
+        }
+        else {  // 현재 위치가 ids[3]일 때
+          d.href = ids[3];  // 아래로 이동하는 버튼을 담당하는 a 태그의 href 속성 값을 ids[3]으로 함으로써 변동을 주지 않음
+          p = 3;  // 현재 위치를 3으로 주어서 현재 위치를 변경하지 않음
+        }
+      }
+
+    </script>
+  </body>
+</html>
